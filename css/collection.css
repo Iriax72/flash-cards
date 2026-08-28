@@ -27,7 +27,7 @@ header a {
     border-radius: 6px;
     margin: 4px;
     padding: 4px;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
 }
 
 #name-form button {
@@ -42,7 +42,7 @@ header a {
     justify-content: center;
 }
 
-#adda-card-form p {
+#add-card-form p {
     margin-top: 8px;
     margin-bottom: 5px;
     padding: 0;
