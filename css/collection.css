@@ -5,7 +5,9 @@ header a {
     background-color: dodgerblue;
     color: black;
     font-weight: bold;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 form {
