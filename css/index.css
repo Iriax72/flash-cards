@@ -9,13 +9,13 @@ main {
 main a {
     width: 34dvw;
     height: 70px;
-    border: 3px solid #3af;
+    border: 3px solid dodgerblue;
     border-radius: 8px;
     background-color: cyan;
     color: black;
     display: flex;
     justify-self: center;
-    text-decoration: center;
+    align-items: center;
 }
 
 main a:hover {
