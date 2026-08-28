@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header, main, footer {
+    margin: 0;
+    width: 100vw;
+    overflow: hidden;
+}
+
+header, footer {
+    flex: none;
+    background-image: #eed;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main {
+    flex: auto;
+    background-color: black;
+    color: #eed;
+}
