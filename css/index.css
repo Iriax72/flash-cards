@@ -1,0 +1,27 @@
+main {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    gap: 18px;
+}
+
+main a {
+    width: 34dvw;
+    height: 70px;
+    border: 3px solid cyan;
+    border-radius: 8px;
+    background-color: beige;
+    color: black;
+}
+
+main a:hover {
+    transform: scale(1.1);
+}
+
+main a#new-collection div {
+    border: none;
+    border-radius: 50%;
+    background-color: dodgerblue;
+    color: black;
+}
