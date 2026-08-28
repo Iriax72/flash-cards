@@ -9,10 +9,13 @@ main {
 main a {
     width: 34dvw;
     height: 70px;
-    border: 3px solid cyan;
+    border: 3px solid #3af;
     border-radius: 8px;
-    background-color: beige;
+    background-color: cyan;
     color: black;
+    display: flex;
+    justify-self: center;
+    text-decoration: center;
 }
 
 main a:hover {
@@ -20,8 +23,15 @@ main a:hover {
 }
 
 main a#new-collection div {
+    width: 9dvw;
+    height: 9dvw;
     border: none;
     border-radius: 50%;
     background-color: dodgerblue;
     color: black;
+    font-size: 1.6rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
