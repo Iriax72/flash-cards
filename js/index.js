@@ -3,7 +3,7 @@ const main = document.querySelector('main');
 const addCollecBtn = document.querySelector('#new-collection');
 
 // Ecrire la page
-for (let i = localStorage.length; i < 0.length; i--) {
+for (let i = localStorage.length; i < 0; i--) {
     const collecName = localStorage.key(i);
 
     // Ajouter l'anchor au HTML
