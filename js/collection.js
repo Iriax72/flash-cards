@@ -17,11 +17,9 @@ h1.innerText = collec;
 
 const cards = JSON.parse(localStorage.getItem(collec));
 alert('cartes: ' + cards);
-/*
 cards.forEach(card => {
     cardArea.append(`<div>| ${card[0]}: ${card[1].}</div>`);
 });
-*/
 
 // EventListener
 nameForm.addEventListener('submit', (event) => {
@@ -49,14 +47,10 @@ addCardForm.addEventListener('submit', (event) => {
 
     const recto = rectoInput.value;
     const verso = versoInput.value;
-    const data = JSON.parse(localStorage.getItem(collec));
-    alert('data: ' + JSON.stringify(data));
-    data.push([recto, verso]);
-    alert('newData: ' + JSON.stringify(data));
-    localStorage.setItem(collec, JSON.stringify(data));
-    alert('Item set !')
 
-    alert(localStorage.getItem(collec));
+    const data = JSON.parse(localStorage.getItem(collec));
+    data.push([recto, verso]);
+    localStorage.setItem(collec, JSON.stringify(data));
 
     // Refresh pour afficher les maj
     window.location.reload()
