@@ -8,7 +8,7 @@ for (let i = 0; i < localStorage.length; i++) {
 
     // Ajouter l'anchor au HTML
     const a = document.createElement('a');
-    a.href = './collection.html';
+    a.href = `./collection.html?collection=${collecName}`;
     a.innerText = collecName;
     main.appendChild(a);
 }
