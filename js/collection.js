@@ -16,10 +16,13 @@ const deleteCollecBtn = document.querySelector('#delete-collec');
 
 // Ecrire la page
 h1.innerText = collec;
+alert(1);
 const cards = JSON.parse(localStorage.getItem(collec));
+alert(2);
 cards.forEach(card => {
     cardArea.append(`<div>| ${card[0]}: ${card[1].}</div>`);
 });
+alert(3);
 
 // EventListener
 nameForm.addEventListener('submit', (event) => {
