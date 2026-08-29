@@ -18,7 +18,10 @@ h1.innerText = collec;
 const cards = JSON.parse(localStorage.getItem(collec));
 alert('cartes: ' + JSON.stringify(cards));
 cards.forEach(card => {
-    cardArea.append(`<div>| ${card[0]}: ${card[1]}.</div>`);
+    div = document.createElement('div');
+    div.classList.add('card');
+    div.innerText = card[0] + ': ' + card[1];
+    cardArea.append(div);
 });
 
 // EventListener
