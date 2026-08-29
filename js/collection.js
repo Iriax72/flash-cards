@@ -8,6 +8,8 @@ const h1 = document.querySelector('h1');
 const nameForm = document.querySelector('#name-form');
 const newNameInput = nameForm.querySelector('input');
 const addCardForm = document.querySelector('#add-card-form');
+const rectoInput = document.querySelector('#recto');
+const versoInput = document.querySelector('#verso');
 const deleteCollecBtn = document.querySelector('#delete-collec');
 //const addCardFormSubmit = addCardForm.querySelector('button[type="submit"]')
 
@@ -37,7 +39,16 @@ nameForm.addEventListener('submit', (event) => {
 
 addCardForm.addEventListener('submit', (event) => {
     event.preventDefault()
-    alert('ajout de la carte');
+    const recto = rectoInput.value;
+    const verso = versoInput.value;
+    rectoInput.value = '';
+    versoInput.value = '';
+    const data = JSON.parse(localStorage.getItem(collec));
+    const newData = data.push([recto, verso]);
+
+    localStorage.setItem(collec, JSON.stringify(newData));
+
+    alert(localStorage.getItem(collec));
 });
 
 deleteCollecBtn.addEventListener('click', (event) => {
