@@ -1,5 +1,5 @@
 alert('script appele')
-/*
+
 const params = new URLSearchParams(window.location.search);
 let collec = params.has('collection') ? params.get('collection') : null;
 alert('params definis')
@@ -23,7 +23,7 @@ cards.forEach(card => {
     cardArea.append(`<div>| ${card[0]}: ${card[1].}</div>`);
 });
 alert(3);
-
+/*
 // EventListener
 nameForm.addEventListener('submit', (event) => {
     event.preventDefault();
