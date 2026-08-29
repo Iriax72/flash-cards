@@ -43,15 +43,19 @@ nameForm.addEventListener('submit', (event) => {
 })
 
 addCardForm.addEventListener('submit', (event) => {
+    alert('Submit !');
     // event.preventDefault()
     const recto = rectoInput.value;
     const verso = versoInput.value;
     // rectoInput.value = '';
     // versoInput.value = '';
+    alert('Recto, Verso: ' + recto + ', ' + verso);
     const data = JSON.parse(localStorage.getItem(collec));
+    alert('data: ' + data);
     const newData = data.push([recto, verso]);
-
+    alert('newData: ' + newData);
     localStorage.setItem(collec, JSON.stringify(newData));
+    alert('Item set !')
 
     alert(localStorage.getItem(collec));
 });
