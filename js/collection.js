@@ -7,6 +7,7 @@ const newCollec = params.has('new') && params.get('new');
 const h1 = document.querySelector('h1');
 const nameForm = document.querySelector('#name-form');
 const newNameInput = nameForm.querySelector('input');
+const cardArea = document.querySelector('#card-area');
 const addCardForm = document.querySelector('#add-card-form');
 const rectoInput = document.querySelector('#recto');
 const versoInput = document.querySelector('#verso');
@@ -15,6 +16,10 @@ const deleteCollecBtn = document.querySelector('#delete-collec');
 
 // Ecrire la page
 h1.innerText = collec;
+const cards = JSON.parse(localStorage.getItem(collec));
+cards.forEach(card => {
+    cardArea.append(`<div>| ${card[0]}: ${card[1].}</div>`);
+});
 
 // EventListener
 nameForm.addEventListener('submit', (event) => {
@@ -38,11 +43,11 @@ nameForm.addEventListener('submit', (event) => {
 })
 
 addCardForm.addEventListener('submit', (event) => {
-    event.preventDefault()
+    // event.preventDefault()
     const recto = rectoInput.value;
     const verso = versoInput.value;
-    rectoInput.value = '';
-    versoInput.value = '';
+    // rectoInput.value = '';
+    // versoInput.value = '';
     const data = JSON.parse(localStorage.getItem(collec));
     const newData = data.push([recto, verso]);
 
