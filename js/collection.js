@@ -41,7 +41,7 @@ addCardForm.addEventListener('submit', (event) => {
 });
 
 deleteCollecBtn.addEventListener('click', (event) => {
-    if (confirm('Message')) {
+    if (confirm('Etes vousbsur de vouloir supprimer la collection ?\nCette action est irreversible')) {
         localStorage.remove(collec);
     } else {
         event.preventDefault();
