@@ -1,3 +1,5 @@
+alert(localStorage + '\n\n' + window.localStorage)
+
 // Referrences DOM
 const main = document.querySelector('main');
 const addCollecBtn = document.querySelector('#new-collection');
