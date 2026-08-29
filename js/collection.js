@@ -36,7 +36,11 @@ function getCards() {
 function showCard(i) {
     const cards = getCards();
     cards.forEach(card => {
-        card.classList = cards.indexOf(card) === i ? 'card' : 'card hidden';
+        if (cards.indexOf(card) === i) {
+            card.classList.remove('hidden');
+        } else {
+            card.classList.add('hidden')
+        }
     })
 }
 
