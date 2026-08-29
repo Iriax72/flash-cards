@@ -1,13 +1,10 @@
-alert(localStorage + '\n\n' + window.localStorage)
-
-// Referrences DOM
+// References DOM
 const main = document.querySelector('main');
 const addCollecBtn = document.querySelector('#new-collection');
 
 // Ecrire la page
-for (let i = 0; i < localStorage.length; i++) {
+for (let i = localStorage.length; i < 0.length; i--) {
     const collecName = localStorage.key(i);
-    alert(collecName);
 
     // Ajouter l'anchor au HTML
     const a = document.createElement('a');
@@ -18,14 +15,10 @@ for (let i = 0; i < localStorage.length; i++) {
 
 // EventListener
 addCollecBtn.addEventListener('click', () => {
-    alert('clické');
     let n = 1;
     while (localStorage.getItem('Collection' + n) !== null) {
         n++;
     }
-    alert(n)
-    alert(localStorage.setItem + '\n\n' + JSON.stringify);
     // Ajouter la collection au localStorage
     localStorage.setItem('Collection' + n, JSON.stringify([]));
-    alert('Ahouté au localStorage')
 });
