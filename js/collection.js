@@ -14,6 +14,8 @@ const versoInput = document.querySelector('#verso');
 const deleteCollecBtn = document.querySelector('#delete-collec');
 //const addCardFormSubmit = addCardForm.querySelector('button[type="submit"]')
 alert('ref dom def')
+
+/*
 // Ecrire la page
 h1.innerText = collec;
 alert(1);
@@ -23,7 +25,7 @@ cards.forEach(card => {
     cardArea.append(`<div>| ${card[0]}: ${card[1].}</div>`);
 });
 alert(3);
-/*
+// ici !
 // EventListener
 nameForm.addEventListener('submit', (event) => {
     event.preventDefault();
