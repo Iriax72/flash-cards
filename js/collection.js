@@ -49,13 +49,11 @@ addCardForm.addEventListener('submit', (event) => {
 
     const recto = rectoInput.value;
     const verso = versoInput.value;
-    // rectoInput.value = '';
-    // versoInput.value = '';
     const data = JSON.parse(localStorage.getItem(collec));
     alert('data: ' + JSON.stringify(data));
-    const newData = data.push([recto, verso]);
-    alert('newData: ' + JSON.stringify(newData));
-    localStorage.setItem(collec, JSON.stringify(newData));
+    data.push([recto, verso]);
+    alert('newData: ' + JSON.stringify(data));
+    localStorage.setItem(collec, JSON.stringify(data));
     alert('Item set !')
 
     alert(localStorage.getItem(collec));
