@@ -17,9 +17,11 @@ h1.innerText = collec;
 
 const cards = JSON.parse(localStorage.getItem(collec));
 alert('cartes: ' + cards);
+/*
 cards.forEach(card => {
     cardArea.append(`<div>| ${card[0]}: ${card[1].}</div>`);
 });
+*/
 
 // EventListener
 nameForm.addEventListener('submit', (event) => {
