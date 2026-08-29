@@ -8,6 +8,7 @@ const h1 = document.querySelector('h1');
 const nameForm = document.querySelector('#name-form');
 const newNameInput = nameForm.querySelector('input');
 const addCardForm = document.querySelector('#add-card-form');
+const deleteCollecBtn = document.querySelector('#delete-collec');
 //const addCardFormSubmit = addCardForm.querySelector('button[type="submit"]')
 
 // Ecrire la page
@@ -38,3 +39,11 @@ addCardForm.addEventListener('submit', (event) => {
     event.preventDefault()
     alert('ajout de la carte');
 });
+
+deleteCollecBtn.addEventListener('click', (event) => {
+    if (confirm('Message')) {
+        localStorage.remove(collec);
+    } else {
+        event.preventDefault();
+    }
+})
