@@ -1,8 +1,6 @@
-alert('script appele')
-
 const params = new URLSearchParams(window.location.search);
 let collec = params.has('collection') ? params.get('collection') : null;
-alert('params definis')
+
 // References DOM
 const h1 = document.querySelector('h1');
 const nameForm = document.querySelector('#name-form');
@@ -25,7 +23,7 @@ cards.forEach(card => {
     cardArea.append(`<div>| ${card[0]}: ${card[1].}</div>`);
 });
 alert(3);
-// ici !
+*/
 // EventListener
 nameForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -72,4 +70,3 @@ deleteCollecBtn.addEventListener('click', (event) => {
         event.preventDefault();
     }
 })
-*/
