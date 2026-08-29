@@ -52,9 +52,9 @@ addCardForm.addEventListener('submit', (event) => {
     // rectoInput.value = '';
     // versoInput.value = '';
     const data = JSON.parse(localStorage.getItem(collec));
-    alert('data: ' + data);
+    alert('data: ' + JSON.stringify(data));
     const newData = data.push([recto, verso]);
-    alert('newData: ' + newData);
+    alert('newData: ' + JSON.stringify(newData));
     localStorage.setItem(collec, JSON.stringify(newData));
     alert('Item set !')
 
