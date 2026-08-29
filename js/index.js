@@ -3,6 +3,8 @@ const main = document.querySelector('main');
 const addCollecBtn = document.querySelector('#new-collection');
 
 // Ecrire la page
+addCollecBtn.href = `./collection.html?new=true&collection=${nextCollecName()}`;
+
 for (let i = 0; i < localStorage.length; i++) {
     const collecName = localStorage.key(i);
 
@@ -13,12 +15,17 @@ for (let i = 0; i < localStorage.length; i++) {
     main.appendChild(a);
 }
 
-// EventListener
-addCollecBtn.addEventListener('click', () => {
+// Fonctions utilitaires
+function nextCollecName() {
     let n = 1;
-    while (localStorage.getItem('Collection' + n) !== null) {
+    while (localStorage.getItem('Collection ' + n) !== null) {
         n++;
     }
+    return 'Collection ' + n;
+}
+
+// EventListener
+addCollecBtn.addEventListener('click', () => {
     // Ajouter la collection au localStorage
-    localStorage.setItem('Collection' + n, JSON.stringify([]));
+    localStorage.setItem(nextCollecName(), JSON.stringify([]));
 });
