@@ -1,6 +1,6 @@
 // Params
 const params = new URLSearchParams(window.location.search);
-const collec = params.has('collection') ? params.get('collection') : null;
+let collec = params.has('collection') ? params.get('collection') : null;
 const newCollec = params.has('new') && params.get('new');
 
 // References DOM
@@ -29,7 +29,9 @@ nameForm.addEventListener('submit', (event) => {
     localStorage.setItem(newName, data);
     localStorage.removeItem(collec);
 
-    h1.innerText = collec;
+    collec = newName
+    h1.innerText = newName;
+    newNameInput.value = '';
 })
 
 addCardForm.addEventListener('submit', (event) => {
