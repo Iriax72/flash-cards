@@ -11,19 +11,18 @@ const rectoInput = document.querySelector('#recto');
 const versoInput = document.querySelector('#verso');
 const deleteCollecBtn = document.querySelector('#delete-collec');
 //const addCardFormSubmit = addCardForm.querySelector('button[type="submit"]')
-alert('ref dom def')
 
 // Ecrire la page
 h1.innerText = collec;
-alert(1);
+
 const cards = JSON.parse(localStorage.getItem(collec));
-alert(2);
+alert('cartes: ' + cards);
 /*
 cards.forEach(card => {
     cardArea.append(`<div>| ${card[0]}: ${card[1].}</div>`);
 });
 */
-alert(3);
+
 // EventListener
 nameForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -64,7 +63,7 @@ addCardForm.addEventListener('submit', (event) => {
 });
 
 deleteCollecBtn.addEventListener('click', (event) => {
-    if (confirm('Etes vousbsur de vouloir supprimer la collection ?\nCette action est irreversible')) {
+    if (confirm('Etes vous sur de vouloir supprimer la collection ?\nCette action est irreversible')) {
         localStorage.removeItem(collec);
     } else {
         event.preventDefault();
