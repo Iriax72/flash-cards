@@ -1,8 +1,8 @@
-// Params
+alert('script appele')
 const params = new URLSearchParams(window.location.search);
 let collec = params.has('collection') ? params.get('collection') : null;
 const newCollec = params.has('new') && params.get('new');
-
+alert('params definis')
 // References DOM
 const h1 = document.querySelector('h1');
 const nameForm = document.querySelector('#name-form');
@@ -13,7 +13,7 @@ const rectoInput = document.querySelector('#recto');
 const versoInput = document.querySelector('#verso');
 const deleteCollecBtn = document.querySelector('#delete-collec');
 //const addCardFormSubmit = addCardForm.querySelector('button[type="submit"]')
-
+alert('ref dom def')
 // Ecrire la page
 h1.innerText = collec;
 alert(1);
