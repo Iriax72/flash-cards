@@ -3,7 +3,7 @@ const main = document.querySelector('main');
 const addCollecBtn = document.querySelector('#new-collection');
 
 // Ecrire la page
-addCollecBtn.href = `./collection.html?new=true&collection=${nextCollecName()}`;
+addCollecBtn.href = `./collection.html?collection=${nextCollecName()}`;
 
 for (let i = 0; i < localStorage.length; i++) {
     const collecName = localStorage.key(i);

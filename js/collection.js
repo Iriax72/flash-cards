@@ -1,7 +1,6 @@
 alert('script appele')
 const params = new URLSearchParams(window.location.search);
 let collec = params.has('collection') ? params.get('collection') : null;
-const newCollec = params.has('new') && params.get('new');
 alert('params definis')
 // References DOM
 const h1 = document.querySelector('h1');
