@@ -24,8 +24,8 @@ addCollecBtn.addEventListener('click', () => {
         n++;
     }
     alert(n)
-    alert(localStorage.setItem + '\n\n' + json.stringify);
+    alert(localStorage.setItem + '\n\n' + JSON.stringify);
     // Ajouter la collection au localStorage
-    localStorage.setItem('Collection' + n, json.stringify([]));
+    localStorage.setItem('Collection' + n, JSON.stringify([]));
     alert('Ahouté au localStorage')
 });
