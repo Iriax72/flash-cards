@@ -1,4 +1,5 @@
 alert('script appele')
+/*
 const params = new URLSearchParams(window.location.search);
 let collec = params.has('collection') ? params.get('collection') : null;
 alert('params definis')
@@ -69,3 +70,4 @@ deleteCollecBtn.addEventListener('click', (event) => {
         event.preventDefault();
     }
 })
+*/
