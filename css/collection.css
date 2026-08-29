@@ -74,3 +74,13 @@ header a {
     font-size: 1.6rem;
     border-radius: 8px;
 }
+
+footer a {
+    height: 50px;
+    min-width: 80px;
+    max-width: 75dvw;
+    background-color: brown;
+    color: white;
+    border-radius: 6px;
+    font-size: 0.8rem;
+}
