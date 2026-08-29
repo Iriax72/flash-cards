@@ -6,23 +6,39 @@ const h1 = document.querySelector('h1');
 const nameForm = document.querySelector('#name-form');
 const newNameInput = nameForm.querySelector('input');
 const cardArea = document.querySelector('#cards-area');
+const leftBtn = document.querySelector('.switch-btn:first-child');
+const rightBtn = document.querySelector('.switch-btn:last-child');
 const addCardForm = document.querySelector('#add-card-form');
 const rectoInput = document.querySelector('#recto');
 const versoInput = document.querySelector('#verso');
 const deleteCollecBtn = document.querySelector('#delete-collec');
 //const addCardFormSubmit = addCardForm.querySelector('button[type="submit"]')
 
+// Valeur
+let currentCard = 0;
+
 // Ecrire la page
 h1.innerText = collec;
 
-const cards = JSON.parse(localStorage.getItem(collec));
-alert('cartes: ' + JSON.stringify(cards));
-cards.forEach(card => {
+const cardsData = JSON.parse(localStorage.getItem(collec));
+cardsData.forEach(card => {
     div = document.createElement('div');
     div.classList.add('card');
     div.innerText = card[0] + ': ' + card[1];
     cardArea.append(div);
 });
+
+// Fonctions utilitaires
+function getCards() {
+    return [...cardArea.querySelectorAll('.card')];
+}
+
+function showCard(i) {
+    const cards = getCards();
+    cards.forEach(card => {
+        card.classList = cards.indexOf(card) === i ? 'card' : 'card hidden';
+    })
+}
 
 // EventListener
 nameForm.addEventListener('submit', (event) => {
@@ -43,7 +59,23 @@ nameForm.addEventListener('submit', (event) => {
     collec = newName
     h1.innerText = newName;
     newNameInput.value = '';
+});
+
+leftBtn.addEventListener('click', () => {
+    currentCard--;
+    if (currentCard < 0) {
+        currentCard = getCards.length;
+    }
+    showCard(currentCard);
 })
+
+rightBtn.addEventListener('click', () => {
+    currentCard++;
+    if (currentCard > getCards().length) {
+        currentCard = 0;
+    }
+    showCard(currentCard);
+});
 
 addCardForm.addEventListener('submit', (event) => {
     event.preventDefault()
@@ -65,4 +97,4 @@ deleteCollecBtn.addEventListener('click', (event) => {
     } else {
         event.preventDefault();
     }
-})
+});
