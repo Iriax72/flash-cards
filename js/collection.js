@@ -25,8 +25,10 @@ cardsData.forEach(card => {
     div = document.createElement('div');
     div.classList.add('card');
     const rectoP = document.createElement('p');
+    rextoP.id = 'rectoP';
     rectoP.innerText = card[0];
     const versoP = document.createElement('p');
+    versoP.id = 'versoP';
     versoP.innerText = card[1];
     div.append(rectoP);
     div.append(versoP);
