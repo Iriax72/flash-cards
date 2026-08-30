@@ -74,7 +74,7 @@ leftBtn.addEventListener('click', () => {
     alert('left click');
     currentCard--;
     if (currentCard < 0) {
-        currentCard = getCards.length - 1;
+        currentCard = getCards().length - 1;
     }
     showCard(currentCard);
 })
