@@ -87,6 +87,10 @@ nameForm.addEventListener('submit', (event) => {
 });
 
 leftBtn.addEventListener('click', () => {
+    // Inverser le sens de deplacement
+    cardArea.classList.add('reversed-way');
+
+    // Afficher la carte precedente
     currentCard--;
     if (currentCard < 0) {
         currentCard = getCards().length - 1;
@@ -95,6 +99,10 @@ leftBtn.addEventListener('click', () => {
 })
 
 rightBtn.addEventListener('click', () => {
+    // Reinitialiser le sens de deplacement
+    cardArea.classList.remove('reversed-way');
+
+    // Afficher la prochaine carte
     currentCard++;
     if (currentCard >= getCards().length) {
         currentCard = 0;

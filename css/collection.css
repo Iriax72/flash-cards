@@ -92,10 +92,20 @@ main .switch-btn {
     }
 }
 
+.reversed-way .card {
+    @starting-style {
+        transform: translateX(-100%);
+    }
+}
+
 .card.hidden {
     display: none;
     transform: translateX(-100%);
     opacity: 0.4;
+}
+
+.reversed-way .card.hidden {
+    transform: translateX(100%);
 }
 
 .card.flipped {
