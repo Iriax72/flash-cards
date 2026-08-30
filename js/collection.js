@@ -24,7 +24,12 @@ const cardsData = JSON.parse(localStorage.getItem(collec));
 cardsData.forEach(card => {
     div = document.createElement('div');
     div.classList.add('card');
-    div.innerText = card[0] + ': ' + card[1];
+    const rectoP = document.createElement('p');
+    rectoP.innerText = card[0];
+    const versoP = document.createElement('p');
+    versoP.innerText = card[1];
+    div.append(rectoP);
+    div.append(versoP);
     cardArea.append(div);
 });
 
