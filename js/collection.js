@@ -22,18 +22,23 @@ h1.innerText = collec;
 
 const cardsData = JSON.parse(localStorage.getItem(collec));
 cardsData.forEach(card => {
+    // creer la carte
     div = document.createElement('div');
     div.classList.add('card');
+    // creer le recto
     const rectoP = document.createElement('p');
-    rextoP.id = 'rectoP';
+    rectoP.id = 'rectoP';
     rectoP.innerText = card[0];
+    // creer le verso
     const versoP = document.createElement('p');
     versoP.id = 'versoP';
     versoP.innerText = card[1];
     versoP.classList.add('hidden');
+    // ajouter la carte a la page
     div.append(rectoP);
     div.append(versoP);
     cardArea.append(div);
+    // permettre le retournement
     div.addEventListener('click', returnCard(div));
 });
 
