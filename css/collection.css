@@ -99,7 +99,7 @@ main .switch-btn {
 }
 
 .card.flipped {
-    transform: rotateY(180deg);
+    transform: rotateX(180deg);
 }
 
 .card p {

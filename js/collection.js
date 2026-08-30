@@ -65,16 +65,6 @@ function showCard(i) {
     })
 }
 
-/*
-function returnCard(card) {
-    alert('carte retournée')
-    const rectoP = card.querySelector('#rectoP');
-    const versoP = card.querySelector('#versoP');
-    rectoP.classList.toggle('hidden');
-    versoP.classList.toggle('hidden');
-}
-    */
-
 // EventListener
 nameForm.addEventListener('submit', (event) => {
     event.preventDefault();
