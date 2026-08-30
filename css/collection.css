@@ -56,6 +56,13 @@ main .switch-btn {
     font-weight: 550;
 }
 
+#card-area {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 .card {
     margin: 8px 12px;
     padding: 12px;
