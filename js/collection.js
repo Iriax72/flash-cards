@@ -42,6 +42,7 @@ cardsData.forEach(card => {
     // permettre le retournement
     cardBtn.addEventListener('click', () => {
         alert('carte retournee');
+        cardBtn.classList.toggle('flipped');
         rectoP.classList.toggle('hidden');
         versoP.classList.toggle('hidden')
     });
