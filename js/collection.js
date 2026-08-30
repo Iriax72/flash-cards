@@ -44,6 +44,7 @@ function showCard(i) {
         } else {
             card.classList.add('hidden')
         }
+        alert(JSON.stringify([...card.classList]))
     })
     alert('fini')
 }
