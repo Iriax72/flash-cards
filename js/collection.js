@@ -30,9 +30,11 @@ cardsData.forEach(card => {
     const versoP = document.createElement('p');
     versoP.id = 'versoP';
     versoP.innerText = card[1];
+    versoP.classList.add('hidden');
     div.append(rectoP);
     div.append(versoP);
     cardArea.append(div);
+    div.addEventListener('click', returnCard(div));
 });
 
 if (getCards().length >= 1) {
@@ -53,6 +55,13 @@ function showCard(i) {
             card.classList.add('hidden')
         }
     })
+}
+
+function returnCard(card) {
+    const rectoP = card.querySelector('#rectoP');
+    const versoP = card.querySelector('#versoP');
+    rectoP.classList.toggle('hidden');
+    versoP.classList.toggle('hidden');
 }
 
 // EventListener
