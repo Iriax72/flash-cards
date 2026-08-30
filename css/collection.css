@@ -126,7 +126,7 @@ main .switch-btn {
     backface-visibility: hidden;
 }
 
-.card p.verso {
+.card #versoP {
     transform: translateY(180deg);
 }
 
