@@ -127,7 +127,7 @@ main .switch-btn {
 }
 
 .card #versoP {
-    transform: translateY(180deg);
+    transform: rotateX(180deg);
 }
 
 #add-card-form {
