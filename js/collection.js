@@ -40,7 +40,11 @@ cardsData.forEach(card => {
     cardBtn.append(versoP);
     cardArea.append(cardBtn);
     // permettre le retournement
-    cardBtn.addEventListener('click', returnCard(div));
+    cardBtn.addEventListener('click', () => {
+        alert('carte retournee');
+        rectoP.classList.toggle('hidden');
+        versoP.classList.toggle('hidden')
+    });
 });
 
 if (getCards().length >= 1) {
@@ -63,6 +67,7 @@ function showCard(i) {
     })
 }
 
+/*
 function returnCard(card) {
     alert('carte retournée')
     const rectoP = card.querySelector('#rectoP');
@@ -70,6 +75,7 @@ function returnCard(card) {
     rectoP.classList.toggle('hidden');
     versoP.classList.toggle('hidden');
 }
+    */
 
 // EventListener
 nameForm.addEventListener('submit', (event) => {
