@@ -75,7 +75,7 @@ main .switch-btn {
     transition:
     transform 0.5s ease-in,
     opacity 0.5s ease-in,
-    display 0.5s ease-in;
+    display 0.5s allow-discrete;
     @starting-style {
         transform: translateX(100%);
         opacity: 0.4;
