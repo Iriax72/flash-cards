@@ -23,8 +23,9 @@ h1.innerText = collec;
 const cardsData = JSON.parse(localStorage.getItem(collec));
 cardsData.forEach(card => {
     // creer la carte
-    div = document.createElement('div');
-    div.classList.add('card');
+    cardBtn = document.createElement('button');
+    cardBtn.classList.add('card');
+    cardBtn.type = 'button';
     // creer le recto
     const rectoP = document.createElement('p');
     rectoP.id = 'rectoP';
@@ -35,11 +36,11 @@ cardsData.forEach(card => {
     versoP.innerText = card[1];
     versoP.classList.add('hidden');
     // ajouter la carte a la page
-    div.append(rectoP);
-    div.append(versoP);
-    cardArea.append(div);
+    cardBtn.append(rectoP);
+    cardBtn.append(versoP);
+    cardArea.append(cardBtn);
     // permettre le retournement
-    //div.addEventListener('click', returnCard(div));
+    cardBtn.addEventListener('click', returnCard(div));
 });
 
 if (getCards().length >= 1) {
@@ -63,6 +64,7 @@ function showCard(i) {
 }
 
 function returnCard(card) {
+    alert('carte retournée')
     const rectoP = card.querySelector('#rectoP');
     const versoP = card.querySelector('#versoP');
     rectoP.classList.toggle('hidden');
