@@ -42,6 +42,7 @@ function showCard(i) {
             card.classList.add('hidden')
         }
     })
+    alert('fini')
 }
 
 // EventListener
@@ -66,6 +67,7 @@ nameForm.addEventListener('submit', (event) => {
 });
 
 leftBtn.addEventListener('click', () => {
+    alert('left click');
     currentCard--;
     if (currentCard < 0) {
         currentCard = getCards.length;
@@ -74,10 +76,12 @@ leftBtn.addEventListener('click', () => {
 })
 
 rightBtn.addEventListener('click', () => {
+    alert('right click');
     currentCard++;
     if (currentCard > getCards().length) {
         currentCard = 0;
     }
+    alert(currentCard);
     showCard(currentCard);
 });
 
