@@ -35,7 +35,10 @@ function getCards() {
 
 function showCard(i) {
     const cards = getCards();
+    alert('cards: ' + JSON.stringify(cards));
+    alert('i: ' + i)
     cards.forEach(card => {
+        alert('indexOf: ' + cards.indexOf(card))
         if (cards.indexOf(card) === i) {
             card.classList.remove('hidden');
         } else {
