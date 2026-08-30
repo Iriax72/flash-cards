@@ -61,6 +61,7 @@ main .switch-btn {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    perspective: 1000px;
 }
 
 .card {
@@ -78,6 +79,7 @@ main .switch-btn {
     align-items: center;
     justify-content: center;
     transform: translateX(0);
+    transform-style: preserve-3d;
     opacity: 1;
     transition:
     transform 0.3s ease-in,
@@ -94,6 +96,18 @@ main .switch-btn {
     display: none;
     transform: translateX(-100%);
     opacity: 0.4;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card p {
+    backface-visibility: hidden;
+}
+
+.card p.verso {
+    transform: translateY(180deg);
 }
 
 #add-card-form {

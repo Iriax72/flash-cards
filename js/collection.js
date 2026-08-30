@@ -34,7 +34,7 @@ cardsData.forEach(card => {
     const versoP = document.createElement('p');
     versoP.id = 'versoP';
     versoP.innerText = card[1];
-    versoP.classList.add('hidden');
+    versoP.classList.add('hidden', 'verso');
     // ajouter la carte a la page
     cardBtn.append(rectoP);
     cardBtn.append(versoP);
