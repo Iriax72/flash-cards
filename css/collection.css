@@ -56,7 +56,7 @@ main .switch-btn {
     font-weight: 550;
 }
 
-div.card {
+.card {
     margin: 8px;
     padding: 12px;
     width: 65dvw;
