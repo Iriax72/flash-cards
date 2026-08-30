@@ -28,6 +28,10 @@ cardsData.forEach(card => {
     cardArea.append(div);
 });
 
+if (getCards().length >= 1) {
+    showCard(0);
+}
+
 // Fonctions utilitaires
 function getCards() {
     return [...cardArea.querySelectorAll('.card')];
@@ -35,18 +39,13 @@ function getCards() {
 
 function showCard(i) {
     const cards = getCards();
-    alert('cards: ' + JSON.stringify(cards));
-    alert('i: ' + i)
     cards.forEach(card => {
-        alert('indexOf: ' + cards.indexOf(card))
         if (cards.indexOf(card) === i) {
             card.classList.remove('hidden');
         } else {
             card.classList.add('hidden')
         }
-        alert(JSON.stringify([...card.classList]))
     })
-    alert('fini')
 }
 
 // EventListener
@@ -71,7 +70,6 @@ nameForm.addEventListener('submit', (event) => {
 });
 
 leftBtn.addEventListener('click', () => {
-    alert('left click');
     currentCard--;
     if (currentCard < 0) {
         currentCard = getCards().length - 1;
@@ -80,12 +78,10 @@ leftBtn.addEventListener('click', () => {
 })
 
 rightBtn.addEventListener('click', () => {
-    alert('right click');
     currentCard++;
     if (currentCard >= getCards().length) {
         currentCard = 0;
     }
-    alert(currentCard);
     showCard(currentCard);
 });
 
