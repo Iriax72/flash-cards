@@ -82,7 +82,8 @@ main .switch-btn {
     transition:
     transform 0.5s ease-in,
     opacity 0.5s ease-in,
-    display 0.5s allow-discrete;
+    display 0.5s;
+    transition-behavior: allow-discrete;
     @starting-style {
         transform: translateX(100%);
         opacity: 0.4;
@@ -93,10 +94,6 @@ main .switch-btn {
     display: none;
     transform: translateX(-100%);
     opacity: 0.4;
-}
-
-.card:hover {
-    transform: scale(1) !important;
 }
 
 #add-card-form {
