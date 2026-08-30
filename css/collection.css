@@ -112,6 +112,14 @@ main .switch-btn {
     transform: rotateX(180deg);
 }
 
+.card.flipped #rectoP {
+    display: none;
+}
+
+.card:not(.flipped) #versoP {
+    display: none;
+}
+
 .card p {
     backface-visibility: hidden;
 }
