@@ -39,7 +39,7 @@ cardsData.forEach(card => {
     div.append(versoP);
     cardArea.append(div);
     // permettre le retournement
-    div.addEventListener('click', returnCard(div));
+    //div.addEventListener('click', returnCard(div));
 });
 
 if (getCards().length >= 1) {
